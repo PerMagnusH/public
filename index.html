@@ -97,61 +97,24 @@
                                 widget.bind(SC.Widget.Events.READY, function() {
                                     widget.load(newSoundUrl, {
                                         show_artwork: false,
-                                        visual: false
+                                        show_teaser: false,
+                                        show_reposts: false,
+                                        hide_related: true,
+                                        show_comments: false,
+                                        show_user: false
                                     });
                                     widget.bind(SC.Widget.Events.FINISH, function() {
                                         if (track !== '410118795')
                                         {
                                         //$("#postYourAdd").attr("disabled", "disabled");
                                             widgetIframe.style.display = "none";
+                                            
                                         }
                                     
                                     });
                                 });
                     
                             }());
-                            
-                            function postYourAdd () {
-                                var widgetIframe = document.getElementById('forPostyouradd');
-                                widget = SC.Widget(widgetIframe);
-                            
-                                var track = findGetParameter("track");
-                                var newSoundUrl = 'http://api.soundcloud.com/tracks/' + track;
-                                var srcAddr = "https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/" + track + "&amp;color=%23ff5500&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=false";
-                                
-                                widget = SC.Widget(widgetIframe);
-                                widget.load(newSoundUrl, {
-                                        show_artwork: false,
-                                        visual: false
-                                });
-                                widget.bind(SC.Widget.Events.FINISH, function() {
-                                        widgetIframe.style.display = "none";
-                                        
-                                });
-                    
-                                widget.bind(SC.Widget.Events.READY, function() {
-                                    
-                                    widget.bind(SC.Widget.Events.FINISH, function() {
-                                        widgetIframe.style.display = "none";
-                                        
-                                    });
-                                    widget.bind(SC.Widget.Events.PLAY, function() {
-                                        
-                                        
-                                    });
-                                    
-                                    //widget.play();
-                                     // Play sound
-                    
-                                });
-                    
-                                
-                                
-                                if (track !== '410118795')
-                                {
-                                    $("#postYourAdd").attr("disabled", "disabled");
-                                }
-                            }
                     </script>
 
 
