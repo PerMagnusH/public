@@ -103,8 +103,18 @@
                     
                                 widget.bind(SC.Widget.Events.READY, function() {
                                     
-                                     // Play sound
+                                    widget.bind(SC.Widget.Events.FINISH, function() {
+                                    
+                                        
+                                    });
+                                    widget.bind(SC.Widget.Events.PLAY, function() {
+                                        
+                                        
+                                    });
+                                    
                                     widget.play();
+                                     // Play sound
+                    
                                 });
                     
                                 
